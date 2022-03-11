@@ -1,0 +1,46 @@
+
+// To add prettier to the eslint code:
+// add: 
+// 1-"prettier" to "extends"
+// 2-"prettier/prittier":["erroer"] to "rules"
+// 3-"prettier" to "plugins"
+
+// To add typescript to eslint:
+// {
+//   "root": true,
+//   "parser": "@typescript-eslint/parser",
+//   "plugins": [
+//     "@typescript-eslint"
+//   ],
+//   "extends": [
+//     "eslint:recommended",
+//     "plugin:@typescript-eslint/eslint-recommended",
+//     "plugin:@typescript-eslint/recommended"
+//   ]
+// }
+
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "root": true,
+    "extends": [
+        "eslint:recommended", 
+        "prettier",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins":[
+        "prettier",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "prettier/prettier": ["error"]
+    }
+}
